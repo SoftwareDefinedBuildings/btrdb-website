@@ -41,11 +41,12 @@
               <ul>
                 <li>Stores data with nanosecond-precision timestamps.</li>
                 <li>Boasts 16.7 million writes per second and 19.8 million reads per second on a single Intel Xeon E5-2680v2 based cloud server with 60GB of RAM (EC2 c3.8xlarge).</li>
-                <li>Precomputes statistical descriptions of some time ranges, for efficient computation of associative statistics over arbitrary time ranges, and constant-time computation of associative statistics over power-of-two-aligned time ranges.</li>
+                <li>Accelerates computation of associative statistics over arbitrary time ranges, using precomputed statistics over power-of-two-aligned time ranges.</li>
                 <li>Delivers 2.93x compression*, including the precomputed statistical records.</li>
                 <li>Provides copy-on-write semantics, with versioning and efficient changeset calculation.</li>
                 <li>Supports Distillate Streams&mdash;streams computed from one or more existing streams&mdash;that are efficiently recomputed as data changes or arrives out-of-order.</li>
                 <li>Scales linearly in the number of nodes.</li>
+                <li>Integrates with <a href="http://spark.apache.org/">Apache Spark</a>.</li>
               </ul>
               * Compression ratio measured on synchrophasor data.
             </p>

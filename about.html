@@ -35,47 +35,32 @@
           <article>
      
             <h3><a href="#">About</a></h3>
-            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
      
             <div class="row">
               <div class="large-6 columns">
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-                <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                <p>BTrDB uses a K-ary tree to store timeseries data. The leaves of the tree store the individual time-value pairs. Each internal node stores associative statistics of the data in its subtree; currently, the statistics are the minimum value, mean value, maximum value, and number of data points. BTrDB uses the internal nodes to accelerate processing of these statistical aggregates over arbitrary time ranges. The statistics at an internal node, by virtue of being associative, can always be computed at a node using only the statistics stored at that node's immediate children. As new data arrives or existing data changes, the relevant statistics can be quickly recomputed by traversing nodes up to the root of the tree.</p>
               </div>
               <div class="large-6 columns">
-                <img src="http://placehold.it/400x240&text=[img]"/>
+                <img src="img/tree.png"/>
               </div>
             </div>
      
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+            <p>BTrDB is currently implemented in <a href="https://golang.org">Go</a>, an open-source programming language with built-in concurrency support that compiles to machine code. It can be configured to store data either using your computer's filesystem, or using <a href="http://ceph.com/">Ceph</a>, a distributed object store, that handles data replication and recovery. Raw data and statistical aggregates can be queried via either HTTP or <a href="https://capnproto.org/">Cap'n Proto</a>.</p>
+            
+            <div class="row">
+              <div class="large-7 columns">
+                <img src="img/graph4.jpg"/>
+              </div>
+              <div class="large-5 columns">
+                <p>By providing efficient computation of statistical aggregates, BTrDB enables a new class of algorithms for timeseries data analytics that scale logarithmically in the size of the data. It also facilitates powerful and responsive techniques for visualizing data, that scale linearly in the size of the visualization, instead of in the size of the data being visualized. You should <a href="https://plot.upmu.org/">try it out</a>!</p>
+              </div>
+              
+            </div>
      
           </article>
      
           <hr/>
-     
-          <article>
-     
-            <h3><a href="#">Blog Post Title</a></h3>
-            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-     
-            <div class="row">
-              <div class="large-6 columns">
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-                <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-              </div>
-              <div class="large-6 columns">
-                <img src="http://placehold.it/400x240&text=[img]"/>
-              </div>
-            </div>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-          </article>
-     
+          
         </div>
      
          
