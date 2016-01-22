@@ -30,7 +30,7 @@
       <div class="row">
      
          
-        <div class="large-9 columns" role="content">
+        <div class="large-12 columns" role="content">
      
           <article>
      
@@ -39,19 +39,18 @@
             <div class="row">
               <div class="large-6 columns">
                 <p>BTrDB uses a K-ary tree to store timeseries data. The leaves of the tree store the individual time-value pairs. Each internal node stores associative statistics of the data in its subtree; currently, the statistics are the minimum value, mean value, maximum value, and number of data points. BTrDB uses the internal nodes to accelerate processing of these statistical aggregates over arbitrary time ranges. The statistics at an internal node, by virtue of being associative, can always be computed at a node using only the statistics stored at that node's immediate children. As new data arrives or existing data changes, the relevant statistics can be quickly recomputed by traversing nodes up to the root of the tree.</p>
+                <p>BTrDB is currently implemented in <a href="https://golang.org">Go</a>, an open-source programming language with built-in concurrency support that compiles to machine code. It can be configured to store data either using your computer's filesystem, or using <a href="http://ceph.com/">Ceph</a>, a distributed object store, that handles data replication and recovery. Raw data and statistical aggregates can be queried via either HTTP or <a href="https://capnproto.org/">Cap'n Proto</a>.</p>
               </div>
               <div class="large-6 columns">
                 <img src="img/tree.png"/>
               </div>
             </div>
-     
-            <p>BTrDB is currently implemented in <a href="https://golang.org">Go</a>, an open-source programming language with built-in concurrency support that compiles to machine code. It can be configured to store data either using your computer's filesystem, or using <a href="http://ceph.com/">Ceph</a>, a distributed object store, that handles data replication and recovery. Raw data and statistical aggregates can be queried via either HTTP or <a href="https://capnproto.org/">Cap'n Proto</a>.</p>
             
             <div class="row">
-              <div class="large-7 columns">
+              <div class="large-8 columns">
                 <img src="img/graph4.jpg"/>
               </div>
-              <div class="large-5 columns">
+              <div class="large-4 columns">
                 <p>By providing efficient computation of statistical aggregates, BTrDB enables a new class of algorithms for timeseries data analytics that scale logarithmically in the size of the data. It also facilitates powerful and responsive techniques for visualizing data, that scale linearly in the size of the visualization, instead of in the size of the data being visualized. You should <a href="https://plot.upmu.org/">try it out</a>!</p>
               </div>
               
@@ -64,30 +63,6 @@
         </div>
      
          
-     
-     
-         
-     
-        <aside class="large-3 columns">
-     
-          <h5>Categories</h5>
-          <ul class="side-nav">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Fun</a></li>
-            <li><a href="#">Weasels</a></li>
-          </ul>
-     
-          <div class="panel">
-            <h5>Featured</h5>
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-            <a href="#">Read More →</a>
-          </div>
-     
-        </aside>
-     
-         
       </div>
 
       <footer class="row">
@@ -95,7 +70,7 @@
           <hr/>
           <div class="row">
             <div class="large-12-columns">
-              <p>© Copyright Michael Andersen. This research is sponsored in part by the U.S. Department of Energy ARPA-E program (DE-AR0000430), National Science Foudnation CPS-1239552, and Fulbright Scholarship program.</p>
+              <p>© Copyright Michael Andersen. This research is sponsored in part by the U.S. Department of Energy ARPA-E program (DE-AR0000430), National Science Foundation CPS-1239552, and Fulbright Scholarship program.</p>
             </div>
           </div>
         </div>
